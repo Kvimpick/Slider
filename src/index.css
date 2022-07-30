@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: hsl(210, 36%, 96%);
+  color: hsl(209, 61%, 16%);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h2,
+h4 {
+  line-height: 1.25;
+  letter-spacing: 0.25rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+p {
+  color: hsl(210, 22%, 49%);
+}
+.section {
+  width: 90vw;
+  margin: 5rem auto;
+  max-width: 1170px;
+}
+.title {
+  color: hsl(209, 34%, 30%);
+  text-transform: capitalize;
+}
+.title h2 {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.underline {
+  width: 5rem;
+  height: 0.25rem;
+  margin: 1rem auto;
+  background: hsl(21, 62%, 45%);
+}
+.section-center {
+  width: 80vw;
+  max-width: 800px;
+  height: 450px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 4rem;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.person-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid hsl(210, 31%, 80%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+article h4 {
+  color: hsl(21, 62%, 45%);
+  margin-bottom: 0.5rem;
+}
+p.title {
+  margin-bottom: 0.5rem;
+}
+p.quote {
+  color: hsl(210, 22%, 49%);
+  max-width: 35rem;
+  margin: 0 auto;
+  line-height: 2;
+  margin-bottom: 1rem;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 200px;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-color: transparent;
+  background: hsl(210, 22%, 49%);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.1s linear;
+  transform: translateY(-50%);
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+.prev:hover,
+.next:hover {
+  background: hsl(21, 62%, 45%);
+}
+article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s linear;
+  opacity: 0;
+}
+article.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+article.prevSlide {
+  transform: translateX(-100%);
+}
+article.nextSlide {
+  transform: translateX(100%);
+}
